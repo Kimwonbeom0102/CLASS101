@@ -22,10 +22,9 @@ namespace FileHandling
             // 스트림을 사용하고 입력           //  파일을 생성
 
             sw.Write(10);             // 같은 메서드지만 다른 매개변수를 받음 즉, 메서드 오버로딩 (같은 이름 다른 형태)
-            sw.WriteLine("Hello");  // 문자열 string 매개변수
+            sw.WriteLine("Hello");    // 문자열 string 매개변수
             sw.WriteLine(3.9131);     // 실수   매개변수
             sw.Close();               // 스트림을 사용했으면 닫아줌
-
 
             // StreamReader Open 으로 열기 모드
             StreamReader sr = new StreamReader(new FileStream("a.txt", FileMode.Open));
@@ -38,11 +37,8 @@ namespace FileHandling
 
             sr.Close();
 
-            
-
-            // using 키워드를 사용하여 생성하면 Close 로 닫아줄 필요가 없어서 자주 사용
-
-            using (StreamWriter sw1 = new StreamWriter(new FileStream("b.txt", FileMode.Create)))
+            Console.WriteLine(Environment.NewLine + "using 키워드 사용 ---------\r\n");
+            using (StreamWriter sw1 = new StreamWriter(new FileStream("b.txt", FileMode.Create)))  // using 키워드를 사용하여 생성하면 Close 로 닫아줄 필요가 없어서 자주 사용
             {
                 sw1.WriteLine("using 키워드로 텍스트 파일 만들기");
                 sw1.WriteLine("Close로 닫아줄 필요가 없음");
@@ -57,12 +53,9 @@ namespace FileHandling
                 Console.WriteLine(sr1.ReadLine());
             }
 
-
             // File 클래스를 사용하여, 간단하게 파일로 출력하기 ----------------------
             // File.WriteAllText(path, text)는 지정한 경로에 텍스트 파일을 생성하고, 지정된 내용을 파일에 씁니다.만약 경로에 파일이 이미 존재한다면, 해당 파일을 덮어쓰고 새로 저장합니다.
             // File.WriteAllLines(path, lines)도 마찬가지로 배열로 받은 여러 문자열을 하나의 텍스트 파일에 한 줄씩 저장하며, 파일이 없다면 자동으로 생성됩니다.
-
-            Console.WriteLine(Environment.NewLine + "File 클래스 사용 ---------" + Environment.NewLine);
 
             // 한줄씩 쓰고
             string[] lines = { "aaaa", "bbbb", "cccc" };  // 세 개의 문자열을 배열로 저장
@@ -76,6 +69,7 @@ namespace FileHandling
                 Console.WriteLine(line);
             }
 
+            Console.WriteLine(Environment.NewLine + "File 클래스 사용 ---------\r\n");
             string text = "Hello World!";
             // 첫번째 방법
             string filePath = @"C:\Users\82106\source\repos\ConsoleApp1\FileHandling\bin\Debug.txt";
@@ -89,13 +83,14 @@ namespace FileHandling
             Console.WriteLine(File.ReadAllText(@"C:\Users\82106\source\repos\ConsoleApp1\FileHandling\bin\Debug.txt"));
 
             // 생성된 파일의 이름을 바꾸려면 Fil.Move 메서드 사용하여 기존 파일 경로, 새로운 파일 경로 
-            
 
+            Console.WriteLine(Environment.NewLine + "--------------미션--------------");
+            Console.WriteLine(Environment.NewLine + "StreamWriter/StreamReader 클래스 사용 ---------");
 
             Console.WriteLine("파일 쓰기");
             StreamWriter sw2 = new StreamWriter(new FileStream("wonbeom.txt", FileMode.Create));
             sw2.WriteLine("김원범");
-            sw2.Write("생년월일 930102");
+            sw2.Write("생년월일 930102\r\n");
             sw2.WriteLine("지역 안산");
 
             sw2.Close();
@@ -112,7 +107,7 @@ namespace FileHandling
             sr2.Close();
 
             //Console.ReadLine();
-
+            Console.WriteLine(Environment.NewLine + "using 키워드 사용 ---------" + Environment.NewLine);
             using (StreamWriter sw3 = new StreamWriter(new FileStream("kim.txt", FileMode.Create)))
             {
                 sw3.WriteLine("김원범 정보");
@@ -131,7 +126,6 @@ namespace FileHandling
             //Console.ReadLine();
 
             Console.WriteLine(Environment.NewLine + "File 클래스 사용 예제 ---------" + Environment.NewLine);
-
             string[] strings = { "나는", "C#을", "공부중이고", "이건 미션이다." };
 
             File.WriteAllLines("c#미션.txt", strings);

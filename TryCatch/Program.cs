@@ -45,7 +45,7 @@ namespace TryCatch
                 Console.WriteLine("예외2");
                 Console.WriteLine(e.Message);
                 throw new MyException();
-                Console.ReadLine();
+                //Console.ReadLine();
             }
 
             finally
