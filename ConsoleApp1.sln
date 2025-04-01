@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MouseClick", "MouseClick\Mo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileCopySearch", "FileCopySearch\FileCopySearch.csproj", "{5973421B-8F65-487E-88DF-50643B77B1B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiThread", "MultiThread\MultiThread.csproj", "{70E293EF-99F1-4151-A99C-C1001B0E21E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{5973421B-8F65-487E-88DF-50643B77B1B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5973421B-8F65-487E-88DF-50643B77B1B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5973421B-8F65-487E-88DF-50643B77B1B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70E293EF-99F1-4151-A99C-C1001B0E21E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70E293EF-99F1-4151-A99C-C1001B0E21E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70E293EF-99F1-4151-A99C-C1001B0E21E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70E293EF-99F1-4151-A99C-C1001B0E21E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

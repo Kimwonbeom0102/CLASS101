@@ -38,7 +38,7 @@ namespace FileCopySearch  //  파일 검색 및 복사
             OpenFileDialog ofd = new OpenFileDialog(); // 파일실행기 생성
             if(ofd.ShowDialog() == DialogResult.OK)    // 파일선택
             {
-                lbl_SearchPath.Text = ofd.FileName;    // 경로에 넣어주고
+                lbl_Search.Text = ofd.FileName;    // 경로에 넣어주고
                 lbl_ExcuteResult.Text = "복사 할 파일이 선택 되었습니다."; // 출력
 
             }
@@ -57,7 +57,7 @@ namespace FileCopySearch  //  파일 검색 및 복사
 
         private void btn_Serach_Click(object sender, EventArgs e)
         {
-            string[] files = Directory.GetFiles(lbl_SearchPath.Text, $"*.txt", SearchOption.AllDirectories);  // GetFiles 메서드로 해당 경로 모든 txt 파일을 가져와
+            string[] files = Directory.GetFiles(btn_Serach.Text, $"*.txt", SearchOption.AllDirectories);  // GetFiles 메서드로 해당 경로 모든 txt 파일을 가져와
             foreach (string s in files)      //  foreach로 하나하나 꺼내줌
             {
                 try
@@ -81,9 +81,9 @@ namespace FileCopySearch  //  파일 검색 및 복사
 
         private void btn_Copy_Click(object sender, EventArgs e)
         {
-            string[] source = lbl_SearchPath.Text.Split('\\');  //  해당 파일 경로를 \\기준으로 나눠 soure에 담아줌
+            string[] source = lbl_Search.Text.Split('\\');  //  해당 파일 경로를 \\기준으로 나눠 soure에 담아줌
             string name = source[source.Length - 1];  //  마지막 파일을 name 에 담아
-            File.Copy(lbl_SearchPath.Text, lbl_DestPath.Text + "\\" + name);  //  \\ 뒤에 copy
+            File.Copy(lbl_Search.Text, lbl_DestPath.Text + "\\" + name);  //  \\ 뒤에 copy
             lbl_ExcuteResult.Text = "파일 복사가 완료되었습니다.";  //  출력
         }   
     }
