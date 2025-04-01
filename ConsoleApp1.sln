@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileHandling", "FileHandlin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiledHandling1", "FiledHandling1\FiledHandling1.csproj", "{D232406C-A8F3-4EFB-81BF-8005D3FFF155}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MouseClick", "MouseClick\MouseClick.csproj", "{9059B4EE-DCBA-404A-87E0-0F3BD089A869}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{D232406C-A8F3-4EFB-81BF-8005D3FFF155}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D232406C-A8F3-4EFB-81BF-8005D3FFF155}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D232406C-A8F3-4EFB-81BF-8005D3FFF155}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9059B4EE-DCBA-404A-87E0-0F3BD089A869}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9059B4EE-DCBA-404A-87E0-0F3BD089A869}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9059B4EE-DCBA-404A-87E0-0F3BD089A869}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9059B4EE-DCBA-404A-87E0-0F3BD089A869}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

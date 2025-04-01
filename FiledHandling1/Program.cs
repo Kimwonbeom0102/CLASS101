@@ -53,9 +53,6 @@ namespace FiledHandling1
             //Stream stream4 = new FileStream("d.dat", FileMode.Truncate);      // 파일을 비워서 열기
             //Stream stream5 = new FileStream("e.dat", FileMode.Append);        // 덧붙이기 모드로 열기
 
-            
-
-
 
 
         }

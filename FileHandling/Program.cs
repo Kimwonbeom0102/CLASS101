@@ -98,12 +98,17 @@ namespace FileHandling
             StreamReader sr2 = new StreamReader(new FileStream("wonbeom.txt", FileMode.Open));
             Console.WriteLine("파일 읽기");
 
-            while(sr2. EndOfStream == false) // 끝이 아니면 계속 반복
+            /*for(int i=0; sr2.EndOfStream == false; i++)
+            {
+                Console.WriteLine(sr2.ReadLine());
+            }*/
+
+            while (sr2.EndOfStream == false) // 끝이 아니면 계속 반복
             {
                 Console.WriteLine(sr2.ReadLine());
 
             }
-
+            // while문을 무한루프에 빠지지않게하는 방법은 변수값 정해주고 i--; 식으로해서 빠져나오게함
             sr2.Close();
 
             //Console.ReadLine();
