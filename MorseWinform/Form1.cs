@@ -18,24 +18,25 @@ namespace MorseWinform
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)  //  버튼 이벤트
         {
-            int frequency = 500;
+            int frequency = 500;   
             int dot = 200;
             int dash = 600;
             string morse = " ";
 
-            foreach (char c in textBox1.Text )
+            foreach (char c in textBox1.Text )  //  TextBox의 Text를 c 에 담아줌
             {
-                char ch = c;
-
-                if (c.Equals(' '))
+                char ch = c;                    // 담아준 c를 문자 ch에 담아줌
+                 
+                if (c.Equals(' '))              // c가 null이면
                 {
-                    Thread.Sleep(800);
+                    Thread.Sleep(800);          // 0.8초 중단
                 }
-                if (c >= 'a' && c <= 'z') { ch = char.Parse(c.ToString().ToUpper()); }  // 문자열이 소문자면 대문자로 바꿔주고 문자열로 담아줌
+                 
+                if (c >= 'a' && c <= 'z') { ch = char.Parse(c.ToString().ToUpper()); }  // c 가 소문자 a ~ z일경우 대문자로 바꾸고 ch문자에 담아줌
 
-                switch (ch)
+                switch (ch)  //  담아진 ch 의 문자를 매개변수로 받아 swtich문으로 실행.  case 일 때 : 실행
                 {
                     case ' ': morse = " "; break;
                     case 'A': morse = ". - "; break;
@@ -76,23 +77,23 @@ namespace MorseWinform
                     case '0': morse = "- - - - -"; break;
                 }
 
-                foreach (char ch1 in morse)
+                foreach (char ch1 in morse)    //  " " 에 담긴 문자를 ch1에 담아주고
                 {
-                    if (ch1.Equals('.'))
+                    if (ch1.Equals('.'))       // 담긴 문자가 . 일 경우 실행
                     {
                         Console.Beep(frequency, dot);  //  Beep 메서드로 주파수( 지속시간, 경고음 )
                     }
-                    if (ch1 == '-')
+                    if (ch1 == '-')            // 담긴 문자가 - 일 경우 실행
                     {
                         Console.Beep(frequency, dash);
                     }
 
-                    if (ch1 == ' ')
+                    if (ch1 == ' ')            // 담긴 문자가 null 일 경우 실행
                     {
                         Thread.Sleep(200);
                     }
 
-                    Thread.Sleep(600);
+                    Thread.Sleep(600);         // 실행 후 0.6초 중단 
                 }
             }
         }
