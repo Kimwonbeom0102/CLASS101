@@ -31,6 +31,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileCopySearch", "FileCopyS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiThread", "MultiThread\MultiThread.csproj", "{70E293EF-99F1-4151-A99C-C1001B0E21E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MorseWinform", "MorseWinform\MorseWinform.csproj", "{389894FE-171B-48B8-B980-D90EE4D85393}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Morse", "Morse\Morse.csproj", "{EEAD4410-4B26-46A4-B6E5-8FF65452DA26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +97,14 @@ Global
 		{70E293EF-99F1-4151-A99C-C1001B0E21E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70E293EF-99F1-4151-A99C-C1001B0E21E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70E293EF-99F1-4151-A99C-C1001B0E21E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{389894FE-171B-48B8-B980-D90EE4D85393}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{389894FE-171B-48B8-B980-D90EE4D85393}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{389894FE-171B-48B8-B980-D90EE4D85393}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{389894FE-171B-48B8-B980-D90EE4D85393}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEAD4410-4B26-46A4-B6E5-8FF65452DA26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEAD4410-4B26-46A4-B6E5-8FF65452DA26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEAD4410-4B26-46A4-B6E5-8FF65452DA26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEAD4410-4B26-46A4-B6E5-8FF65452DA26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
