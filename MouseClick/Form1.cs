@@ -13,6 +13,8 @@ namespace MouseClick
 {
     public partial class Form1 : Form
     {
+        int frequancy = 500;
+        int during = 300;
         int Tick = 0;    //   프레임 당 Tick 증가 변수 
         [DllImport("user32.dll")]  //  Dll - user32 라이브러리 사용
         static extern void mouse_event(uint dwFlags, uint dx, uint dy, uint dwData, int dwExtraInfo);  //  x, y값 좌표 등
@@ -36,21 +38,33 @@ namespace MouseClick
 
             if (Tick == 30)                              // Tick = 30 이 되었을때 실행
             {
-                Cursor.Position = new Point(500, 391);   // 마우스 좌표 포지션 변경 
+                Cursor.Position = new Point(300, 410);   // 마우스 좌표 포지션 변경 
 
                 mouse_event(R_BUTTON_DOWN, 0, 0, 0, 0);  // 이벤트 발생
                 mouse_event(R_BUTTON_UP, 0, 0, 0, 0);
-                MessageBox.Show("매크로가 한번 눌렸습니다.");
-                
-               
+                //MessageBox.Show("매크로가 한번 눌렸습니다.");
+
+                Console.Beep(frequancy, during); // 버튼이 눌리면 삐소리
+            }
+
+            if (Tick == 50)
+            {
+                Cursor.Position = new Point(550, 380);
+
+                mouse_event(R_BUTTON_DOWN, 0, 0, 0, 0);
+                mouse_event(R_BUTTON_UP, 0, 0, 0, 0);
+
+                Console.Beep(frequancy, during); 
             }
 
             if (Tick == 60)
             {
-                Cursor.Position = new Point(800, 391);
+                Cursor.Position = new Point(800, 170);
 
                 mouse_event(R_BUTTON_DOWN, 0, 0, 0, 0);
                 mouse_event(R_BUTTON_UP, 0, 0, 0, 0);
+                Console.Beep(frequancy, during);
+
                 Tick = 0;
             }
         }
