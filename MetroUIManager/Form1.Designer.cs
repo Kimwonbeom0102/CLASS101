@@ -1,6 +1,6 @@
 ﻿namespace MetroUIManager
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.mtTimer = new MetroFramework.Controls.MetroTile();
             this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
             this.mlTheme = new MetroFramework.Controls.MetroLabel();
@@ -38,10 +38,12 @@
             this.mcbTheme = new MetroFramework.Controls.MetroComboBox();
             this.mcbColor = new MetroFramework.Controls.MetroComboBox();
             this.mcbFont = new MetroFramework.Controls.MetroComboBox();
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
+            this.mtNews = new MetroFramework.Controls.MetroTile();
             this.mtNetPath1 = new MetroFramework.Controls.MetroTile();
             this.mtNetPath2 = new MetroFramework.Controls.MetroTile();
-            this.metroTile2 = new MetroFramework.Controls.MetroTile();
+            this.mtPath1 = new MetroFramework.Controls.MetroTile();
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.mtPaht2 = new MetroFramework.Controls.MetroTile();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,6 +59,7 @@
             this.mtTimer.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.mtTimer.UseSelectable = true;
             this.mtTimer.UseTileImage = true;
+            this.mtTimer.Click += new System.EventHandler(this.mtTimer_Click);
             // 
             // metroStyleManager1
             // 
@@ -88,7 +91,7 @@
             this.mlFont.Size = new System.Drawing.Size(42, 19);
             this.mlFont.TabIndex = 3;
             this.mlFont.Text = "Font :";
-            this.mlFont.Click += new System.EventHandler(this.metroLabel3_Click);
+            this.mlFont.Click += new System.EventHandler(this.mcbColor_Click);
             // 
             // mcbTheme
             // 
@@ -127,7 +130,7 @@
             this.mcbColor.Size = new System.Drawing.Size(121, 29);
             this.mcbColor.TabIndex = 5;
             this.mcbColor.UseSelectable = true;
-            this.mcbColor.SelectedIndexChanged += new System.EventHandler(this.metroComboBox2_SelectedIndexChanged);
+            this.mcbColor.SelectedIndexChanged += new System.EventHandler(this.mcbColor_SelectedIndexChanged);
             // 
             // mcbFont
             // 
@@ -139,18 +142,19 @@
             this.mcbFont.TabIndex = 6;
             this.mcbFont.UseSelectable = true;
             // 
-            // metroTile1
+            // mtNews
             // 
-            this.metroTile1.ActiveControl = null;
-            this.metroTile1.Location = new System.Drawing.Point(23, 345);
-            this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(145, 129);
-            this.metroTile1.TabIndex = 8;
-            this.metroTile1.Text = "News Crawler";
-            this.metroTile1.TileImage = ((System.Drawing.Image)(resources.GetObject("metroTile1.TileImage")));
-            this.metroTile1.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile1.UseSelectable = true;
-            this.metroTile1.UseTileImage = true;
+            this.mtNews.ActiveControl = null;
+            this.mtNews.Location = new System.Drawing.Point(23, 345);
+            this.mtNews.Name = "mtNews";
+            this.mtNews.Size = new System.Drawing.Size(145, 129);
+            this.mtNews.TabIndex = 8;
+            this.mtNews.Text = "News Crawler";
+            this.mtNews.TileImage = ((System.Drawing.Image)(resources.GetObject("mtNews.TileImage")));
+            this.mtNews.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.mtNews.UseSelectable = true;
+            this.mtNews.UseTileImage = true;
+            this.mtNews.Click += new System.EventHandler(this.mtNews_Click);
             // 
             // mtNetPath1
             // 
@@ -178,28 +182,58 @@
             this.mtNetPath2.UseSelectable = true;
             this.mtNetPath2.UseTileImage = true;
             // 
-            // metroTile2
+            // mtPath1
             // 
-            this.metroTile2.ActiveControl = null;
-            this.metroTile2.Location = new System.Drawing.Point(494, 316);
-            this.metroTile2.Name = "metroTile2";
-            this.metroTile2.Size = new System.Drawing.Size(86, 85);
-            this.metroTile2.TabIndex = 10;
-            this.metroTile2.Text = "Note";
-            this.metroTile2.TileImage = ((System.Drawing.Image)(resources.GetObject("metroTile2.TileImage")));
-            this.metroTile2.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile2.UseSelectable = true;
-            this.metroTile2.UseTileImage = true;
+            this.mtPath1.ActiveControl = null;
+            this.mtPath1.Location = new System.Drawing.Point(494, 316);
+            this.mtPath1.Name = "mtPath1";
+            this.mtPath1.Size = new System.Drawing.Size(86, 85);
+            this.mtPath1.TabIndex = 10;
+            this.mtPath1.Text = "Notepad";
+            this.mtPath1.TileImage = ((System.Drawing.Image)(resources.GetObject("mtPath1.TileImage")));
+            this.mtPath1.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.mtPath1.UseSelectable = true;
+            this.mtPath1.UseTileImage = true;
+            this.mtPath1.Click += new System.EventHandler(this.mtExe_Click);
             // 
-            // Form1
+            // metroPanel1
+            // 
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(243, 178);
+            this.metroPanel1.Name = "metroPanel1";
+            this.metroPanel1.Size = new System.Drawing.Size(506, 337);
+            this.metroPanel1.TabIndex = 11;
+            this.metroPanel1.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 10;
+            this.metroPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel1_Paint);
+            // 
+            // mtPaht2
+            // 
+            this.mtPaht2.ActiveControl = null;
+            this.mtPaht2.Location = new System.Drawing.Point(616, 316);
+            this.mtPaht2.Name = "mtPaht2";
+            this.mtPaht2.Size = new System.Drawing.Size(86, 85);
+            this.mtPaht2.TabIndex = 0;
+            this.mtPaht2.Text = "Calculator";
+            this.mtPaht2.TileImage = ((System.Drawing.Image)(resources.GetObject("mtPaht2.TileImage")));
+            this.mtPaht2.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.mtPaht2.UseSelectable = true;
+            this.mtPaht2.UseTileImage = true;
+            this.mtPaht2.Click += new System.EventHandler(this.mtExe_Click);
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 551);
-            this.Controls.Add(this.metroTile2);
+            this.Controls.Add(this.mtPath1);
             this.Controls.Add(this.mtNetPath2);
             this.Controls.Add(this.mtNetPath1);
-            this.Controls.Add(this.metroTile1);
+            this.Controls.Add(this.mtNews);
             this.Controls.Add(this.mcbFont);
             this.Controls.Add(this.mcbColor);
             this.Controls.Add(this.mcbTheme);
@@ -207,8 +241,12 @@
             this.Controls.Add(this.mlColor);
             this.Controls.Add(this.mlTheme);
             this.Controls.Add(this.mtTimer);
-            this.Name = "Form1";
+            this.Controls.Add(this.mtPaht2);
+            this.Controls.Add(this.metroPanel1);
+            this.Name = "MainForm";
             this.Text = "Task Management";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -225,10 +263,12 @@
         private MetroFramework.Controls.MetroComboBox mcbTheme;
         private MetroFramework.Controls.MetroComboBox mcbColor;
         private MetroFramework.Controls.MetroComboBox mcbFont;
-        private MetroFramework.Controls.MetroTile metroTile1;
+        private MetroFramework.Controls.MetroTile mtNews;
         private MetroFramework.Controls.MetroTile mtNetPath1;
         private MetroFramework.Controls.MetroTile mtNetPath2;
-        private MetroFramework.Controls.MetroTile metroTile2;
+        private MetroFramework.Controls.MetroTile mtPath1;
+        private MetroFramework.Controls.MetroPanel metroPanel1;
+        private MetroFramework.Controls.MetroTile mtPaht2;
     }
 }
 
