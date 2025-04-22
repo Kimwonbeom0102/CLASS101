@@ -43,7 +43,10 @@
             this.mtNetPath2 = new MetroFramework.Controls.MetroTile();
             this.mtPath1 = new MetroFramework.Controls.MetroTile();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.mtPaht2 = new MetroFramework.Controls.MetroTile();
+            this.mtPath4 = new MetroFramework.Controls.MetroTile();
+            this.mtPath2 = new MetroFramework.Controls.MetroTile();
+            this.mtPath3 = new MetroFramework.Controls.MetroTile();
+            this.mtTaskMgr = new MetroFramework.Controls.MetroTile();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,7 +94,6 @@
             this.mlFont.Size = new System.Drawing.Size(42, 19);
             this.mlFont.TabIndex = 3;
             this.mlFont.Text = "Font :";
-            this.mlFont.Click += new System.EventHandler(this.mcbColor_Click);
             // 
             // mcbTheme
             // 
@@ -105,6 +107,7 @@
             this.mcbTheme.Size = new System.Drawing.Size(121, 29);
             this.mcbTheme.TabIndex = 4;
             this.mcbTheme.UseSelectable = true;
+            this.mcbTheme.SelectedIndexChanged += new System.EventHandler(this.mcbTheme_SelectedIndexChanged);
             // 
             // mcbColor
             // 
@@ -141,6 +144,7 @@
             this.mcbFont.Size = new System.Drawing.Size(121, 29);
             this.mcbFont.TabIndex = 6;
             this.mcbFont.UseSelectable = true;
+            this.mcbFont.SelectedIndexChanged += new System.EventHandler(this.mcbFont_SelectedIndexChanged);
             // 
             // mtNews
             // 
@@ -168,6 +172,7 @@
             this.mtNetPath1.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.mtNetPath1.UseSelectable = true;
             this.mtNetPath1.UseTileImage = true;
+            this.mtNetPath1.Click += new System.EventHandler(this.mtNetPath_Click);
             // 
             // mtNetPath2
             // 
@@ -201,36 +206,81 @@
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(243, 178);
+            this.metroPanel1.Location = new System.Drawing.Point(242, 178);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(506, 337);
+            this.metroPanel1.Size = new System.Drawing.Size(535, 350);
             this.metroPanel1.TabIndex = 11;
             this.metroPanel1.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
-            this.metroPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel1_Paint);
+            this.metroPanel1.Visible = false;
             // 
-            // mtPaht2
+            // mtPath4
             // 
-            this.mtPaht2.ActiveControl = null;
-            this.mtPaht2.Location = new System.Drawing.Point(616, 316);
-            this.mtPaht2.Name = "mtPaht2";
-            this.mtPaht2.Size = new System.Drawing.Size(86, 85);
-            this.mtPaht2.TabIndex = 0;
-            this.mtPaht2.Text = "Calculator";
-            this.mtPaht2.TileImage = ((System.Drawing.Image)(resources.GetObject("mtPaht2.TileImage")));
-            this.mtPaht2.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.mtPaht2.UseSelectable = true;
-            this.mtPaht2.UseTileImage = true;
-            this.mtPaht2.Click += new System.EventHandler(this.mtExe_Click);
+            this.mtPath4.ActiveControl = null;
+            this.mtPath4.Location = new System.Drawing.Point(616, 443);
+            this.mtPath4.Name = "mtPath4";
+            this.mtPath4.Size = new System.Drawing.Size(86, 85);
+            this.mtPath4.TabIndex = 2;
+            this.mtPath4.Text = "Local";
+            this.mtPath4.TileImage = ((System.Drawing.Image)(resources.GetObject("mtPath4.TileImage")));
+            this.mtPath4.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.mtPath4.UseSelectable = true;
+            this.mtPath4.UseTileImage = true;
+            this.mtPath4.Click += new System.EventHandler(this.mtPath_Click);
+            // 
+            // mtPath2
+            // 
+            this.mtPath2.ActiveControl = null;
+            this.mtPath2.Location = new System.Drawing.Point(616, 316);
+            this.mtPath2.Name = "mtPath2";
+            this.mtPath2.Size = new System.Drawing.Size(86, 85);
+            this.mtPath2.TabIndex = 0;
+            this.mtPath2.Text = "Calculator";
+            this.mtPath2.TileImage = ((System.Drawing.Image)(resources.GetObject("mtPath2.TileImage")));
+            this.mtPath2.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.mtPath2.UseSelectable = true;
+            this.mtPath2.UseTileImage = true;
+            this.mtPath2.Click += new System.EventHandler(this.mtExe_Click);
+            // 
+            // mtPath3
+            // 
+            this.mtPath3.ActiveControl = null;
+            this.mtPath3.Location = new System.Drawing.Point(494, 443);
+            this.mtPath3.Name = "mtPath3";
+            this.mtPath3.Size = new System.Drawing.Size(86, 85);
+            this.mtPath3.TabIndex = 0;
+            this.mtPath3.Text = "DownLoad";
+            this.mtPath3.TileImage = ((System.Drawing.Image)(resources.GetObject("mtPath3.TileImage")));
+            this.mtPath3.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.mtPath3.UseSelectable = true;
+            this.mtPath3.UseTileImage = true;
+            this.mtPath3.Click += new System.EventHandler(this.mtPath_Click);
+            // 
+            // mtTaskMgr
+            // 
+            this.mtTaskMgr.ActiveControl = null;
+            this.mtTaskMgr.Location = new System.Drawing.Point(373, 443);
+            this.mtTaskMgr.Name = "mtTaskMgr";
+            this.mtTaskMgr.Size = new System.Drawing.Size(86, 85);
+            this.mtTaskMgr.TabIndex = 2;
+            this.mtTaskMgr.Text = "TaskManager";
+            this.mtTaskMgr.TileImage = ((System.Drawing.Image)(resources.GetObject("mtTaskMgr.TileImage")));
+            this.mtTaskMgr.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.mtTaskMgr.UseSelectable = true;
+            this.mtTaskMgr.UseTileImage = true;
+            this.mtTaskMgr.Click += new System.EventHandler(this.mtTaskMgr_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 551);
+            this.Controls.Add(this.mtTaskMgr);
+            this.Controls.Add(this.mtPath3);
             this.Controls.Add(this.mtPath1);
+            this.Controls.Add(this.mtPath4);
             this.Controls.Add(this.mtNetPath2);
             this.Controls.Add(this.mtNetPath1);
             this.Controls.Add(this.mtNews);
@@ -241,7 +291,7 @@
             this.Controls.Add(this.mlColor);
             this.Controls.Add(this.mlTheme);
             this.Controls.Add(this.mtTimer);
-            this.Controls.Add(this.mtPaht2);
+            this.Controls.Add(this.mtPath2);
             this.Controls.Add(this.metroPanel1);
             this.Name = "MainForm";
             this.Text = "Task Management";
@@ -268,7 +318,10 @@
         private MetroFramework.Controls.MetroTile mtNetPath2;
         private MetroFramework.Controls.MetroTile mtPath1;
         private MetroFramework.Controls.MetroPanel metroPanel1;
-        private MetroFramework.Controls.MetroTile mtPaht2;
+        private MetroFramework.Controls.MetroTile mtPath2;
+        private MetroFramework.Controls.MetroTile mtPath3;
+        private MetroFramework.Controls.MetroTile mtPath4;
+        private MetroFramework.Controls.MetroTile mtTaskMgr;
     }
 }
 
