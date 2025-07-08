@@ -7,24 +7,24 @@
 
 ## 📁 프로젝트 목록
 
-| 프로젝트명 | 설명 | 최근 커밋 |
+| 프로젝트명 | 설명 
 |------------|------|------------|
-| `ConsoleApp1` | C# 기초 문법 연습용 콘솔 앱 | 초기 커밋 |
-| `ConsoleApp2` | C# 기초 문법 연습용 콘솔 앱 | 초기 커밋 |
-| `ConsoleApp3` | C# 기초 문법 연습용 콘솔 앱 | 초기 커밋 |
-| `ConsoleApp4` | C# 기초 문법 연습용 콘솔 앱 | 초기 커밋 |
-| `Delegate` | 델리게이트(Delegate) 개념 연습 | 초기 커밋 |
-| `ExtensionMethod` | 확장 메서드 사용법 실습 | 초기 커밋 |
-| `FileCopySearch` | 파일 경로 탐색 및 복사 기능 구현 (WinForm) | 수정 (last week) |
-| `FileHandling` | 파일 입출력 및 마우스 클릭 매크로 기능 포함 | last week |
-| `FiledHandling1` | FileHandling의 변형/실험 버전 | last week |
-| `MouseClick` | 파일 복사 및 경로 탐색 WinForm 매크로 | last week |
+| `ConsoleApp1` | C# 기초 문법 연습용 콘솔 앱 
+| `ConsoleApp2` | C# 기초 문법 연습용 콘솔 앱 
+| `ConsoleApp3` | C# 기초 문법 연습용 콘솔 앱 
+| `ConsoleApp4` | C# 기초 문법 연습용 콘솔 앱 
+| `Delegate` | 델리게이트(Delegate) 개념 연습 
+| `ExtensionMethod` | 확장 메서드 사용법 실습 
+| `FileCopySearch` | 파일 경로 탐색 및 복사 기능 구현 (WinForm) 
+| `FileHandling` | 파일 입출력 및 마우스 클릭 매크로 기능 포함 
+| `FiledHandling1` | FileHandling의 변형/실험 버전 
+| `MouseClick` | 파일 복사 및 경로 탐색 WinForm 매크로 
 | `Morse` | 콘솔 기반 모스부호 생성기 | last week |
-| `MorseWinform` | WinForm 기반 모스부호 생성기 (주석 추가) | 5 days ago |
-| `MultiThread` | 모스부호 변환에 멀티스레딩 적용 | last week |
-| `ThreadAndTask` | Thread vs Task 실습 | last month |
-| `TryCatch` | 예외 처리 및 파일 처리 실습 | 2 weeks ago |
-| `interfacetest` | C# 인터페이스 사용법 실습 | 초기 커밋 |
+| `MorseWinform` | WinForm 기반 모스부호 생성기  
+| `MultiThread` | 모스부호 변환에 멀티스레딩 적용 
+| `ThreadAndTask` | Thread vs Task 실습 
+| `TryCatch` | 예외 처리 및 파일 처리 실습 
+| `interfacetest` | C# 인터페이스 사용법 실습 
 
 ---
 
